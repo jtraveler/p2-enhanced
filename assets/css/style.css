@@ -5,8 +5,8 @@ body {
   font-size: 16px;
   color: #2f1a00;
   align-items: center;
-  background-image: url(https://jtraveler.github.io/project-2/assets/images/background-bottom-waves.svg), url(https://jtraveler.github.io/project-2/assets/images/background-shapes.svg);
-  background-position: top 407px right 0px, top 10px right 0px;
+  background-image: url(https://jtraveler.github.io/p2-enhanced/assets/images/background-shapes.svg), url(https://jtraveler.github.io/p2-enhanced/assets/images/background-bottom-waves.svg);
+  background-position: top 10px right 0px, top 407px right 0px;
   background-size: 2150px, 100%;
   background-repeat: no-repeat, repeat-x;
 
