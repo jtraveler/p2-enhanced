@@ -6,9 +6,9 @@ body {
   color: #2f1a00;
   align-items: center;
   background-image: url(https://jtraveler.github.io/p2-enhanced/assets/images/background-shapes.svg), url(https://jtraveler.github.io/p2-enhanced/assets/images/background-bottom-waves.svg);
-  background-position: top 10px right 0px, top 407px right 0px;
-  background-size: 2150px, 100%;
-  background-repeat: no-repeat, repeat-x;
+  background-position: top 10px center, top 407px right 0px;
+  background-size: 2000px, 2150px;
+  background-repeat: repeat, repeat-x;
 
 }
 
@@ -29,7 +29,7 @@ h1 {
 }
 
 #north_shell, #south_shell, #east_shell, #west_shell {
-      justify-content: center;
+      justify-content: flex-start;
 }
 
 
@@ -86,6 +86,9 @@ h1 {
   border-radius: 5px;
   height: fit-content;
   min-height: 130px;
+  -webkit-box-shadow: 0px 0px 105px 15px rgb(254 245 196);
+  background: rgb(253 235 141);
+  border-radius: 25px;
 }
 
 #direction {
