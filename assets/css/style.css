@@ -30,6 +30,7 @@ h1 {
 
 #north_shell, #south_shell, #east_shell, #west_shell {
       justify-content: flex-start;
+      display: none;
 }
 
 

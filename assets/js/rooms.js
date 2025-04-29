@@ -344,7 +344,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/parents-and-Leo-in-the-kitchen.webp",
+      src: "assets/images/parents-and-leo-in-the-kitchen.webp",
       alt: "Leo instantly jumps up and tells his parents about the book."
     }
   },
@@ -444,7 +444,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/General-Leo-Grandmother-Oona.webp",
+      src: "assets/images/general-leo-grandmother-oona.webp",
       alt: "Leo instantly jumps up and tells his parents about the book."
     }
   },
@@ -462,7 +462,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/The-Trickster---Running.webp",
+      src: "assets/images/the-trickster---running.webp",
       alt: "Leo on a quiet path with a glowing sign"
     }
   },
@@ -480,7 +480,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/The-Trickster---Off-the-Cliff.webp",
+      src: "assets/images/the-trickster---off-the-cliff.webp",
       alt: "Leo on a quiet path with a glowing sign"
     }
   },
@@ -498,7 +498,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/The-Trickster---And-Leo-Talking.webp",
+      src: "assets/images/the-trickster---and-leo-talking.webp",
       alt: "Leo on a quiet path with a glowing sign"
     }
   },
