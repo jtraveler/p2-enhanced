@@ -31,21 +31,32 @@ let currentRoom = 0;
  * This function handles the game flow
  */
 function gameMaster() {
-    // Display the current room description
-    readDescrption(currentRoom);
-
-    // Update the media for the current room
-    updateRoomMedia(currentRoom); 
-
-    // Set up the available exits/buttons
-    handleExits(currentRoom);
+  // First fade out everything
+  fadeOutElements();
+  
+  // Then update everything with delayed fade-ins
+  setTimeout(() => {
+      // Display the current room description
+      readDescrption(currentRoom);
+      
+      // Update the media for the current room
+      updateRoomMedia(currentRoom); 
+      
+      // Set up the available exits/buttons
+      handleExits(currentRoom);
+      
+      // Fade in elements with different delays
+      fadeInElements();
+  }, 500); // Wait for fade out to complete
 }
 
 /**
  * This function updates the narrator text
  *  */ 
 function readDescrption(currentRoom) {
-    narrator.innerText = rooms[currentRoom].description;
+  narrator.innerText = rooms[currentRoom].description;
+  // Add fade-out initially
+  narrator.classList.add('fade-out');
 }
 
 /**
@@ -53,78 +64,81 @@ function readDescrption(currentRoom) {
  * and attaches event listeners to them
  */
 function handleExits(currentRoom) {
+  // Replace each button with a clone and update our reference
+  north = replaceButton(north);
+  south = replaceButton(south);
+  east = replaceButton(east);
+  west = replaceButton(west);
+  
+  // Apply fade-out class to all direction containers initially
+  north_shell.classList.add('fade-out');
+  south_shell.classList.add('fade-out');
+  east_shell.classList.add('fade-out');
+  west_shell.classList.add('fade-out');
 
-    // Replace each button with a clone and update our reference
-    north = replaceButton(north);
-    south = replaceButton(south);
-    east = replaceButton(east);
-    west = replaceButton(west);
+  // NORTH direction
+  if (rooms[currentRoom].north != -1) {
+      // There is an exit to the north
+      north_shell.style.display = "flex"; // Make button visible
+      north.innerText = "Go North"; // Set button text
+      console.log("North button text:", north.textContent)
 
-    // NORTH direction
-    if (rooms[currentRoom].north != -1) {
-        // There is an exit to the north
-        north_shell.style.display = "flex"; // Make button visible
-        north.innerText = "Go North"; // Set button text
-        console.log("North button text:", north.textContent)
-
-        // Update the north button with the custom text
-        north.innerText = rooms[currentRoom].buttonText.north;
-
-        // When clicked, move to the room in that direction
-        north.addEventListener('click', () => move(rooms[currentRoom].north));
-    } else {
-        north_shell.style.display = "none";
-    }
-
-    // SOUTH direction
-    if (rooms[currentRoom].south != -1) {
-        // There is an exit to the south
-        south_shell.style.display = "flex"; // Make button visible
-        south.innerText = "Go South"; // Set button text
-        console.log("South button text:", south.textContent)
-
-        // Update the south button with the custom text
-        south.innerText = rooms[currentRoom].buttonText.south;
-
-        // When clicked, move to the room in that direction
-        south.addEventListener('click', () => move(rooms[currentRoom].south));
-    } else {
-        south_shell.style.display = "none";
-    }
-
-    // EAST Direction
-    if (rooms[currentRoom].east != -1) {
-      // There is an exit to the east
-      east_shell.style.display = "flex"; // Make button visible
-      east.innerText = "Go East"; // Set button text
-      console.log("East button text:", east.textContent)
-
-      // Update the east button with the custom text
-      east.innerText = rooms[currentRoom].buttonText.east;
+      // Update the north button with the custom text
+      north.innerText = rooms[currentRoom].buttonText.north;
 
       // When clicked, move to the room in that direction
-      east.addEventListener('click', () => move(rooms[currentRoom].east));
-    } else {
-        east_shell.style.display = "none";
-    }
+      north.addEventListener('click', () => move(rooms[currentRoom].north));
+  } else {
+      north_shell.style.display = "none";
+  }
 
-    // WEST Direction
-    if (rooms[currentRoom].west != -1) {
-        // There is an exit to the west
-        west_shell.style.display = "flex"; // Make button visible
-        west.innerText = "Go West"; // Set button text
-        console.log("West button text:", west.textContent)
+  // SOUTH direction
+  if (rooms[currentRoom].south != -1) {
+      // There is an exit to the south
+      south_shell.style.display = "flex"; // Make button visible
+      south.innerText = "Go South"; // Set button text
+      console.log("South button text:", south.textContent)
 
-        // Update the east button with the custom text
-        west.innerText = rooms[currentRoom].buttonText.west;
+      // Update the south button with the custom text
+      south.innerText = rooms[currentRoom].buttonText.south;
 
-        // When clicked, move to the room in that direction
-        west.addEventListener('click', () => move(rooms[currentRoom].west));
-    } else {
-        west_shell.style.display = "none";
-    }
+      // When clicked, move to the room in that direction
+      south.addEventListener('click', () => move(rooms[currentRoom].south));
+  } else {
+      south_shell.style.display = "none";
+  }
 
-    
+  // EAST Direction
+  if (rooms[currentRoom].east != -1) {
+    // There is an exit to the east
+    east_shell.style.display = "flex"; // Make button visible
+    east.innerText = "Go East"; // Set button text
+    console.log("East button text:", east.textContent)
+
+    // Update the east button with the custom text
+    east.innerText = rooms[currentRoom].buttonText.east;
+
+    // When clicked, move to the room in that direction
+    east.addEventListener('click', () => move(rooms[currentRoom].east));
+  } else {
+      east_shell.style.display = "none";
+  }
+
+  // WEST Direction
+  if (rooms[currentRoom].west != -1) {
+      // There is an exit to the west
+      west_shell.style.display = "flex"; // Make button visible
+      west.innerText = "Go West"; // Set button text
+      console.log("West button text:", west.textContent)
+
+      // Update the west button with the custom text
+      west.innerText = rooms[currentRoom].buttonText.west;
+
+      // When clicked, move to the room in that direction
+      west.addEventListener('click', () => move(rooms[currentRoom].west));
+  } else {
+      west_shell.style.display = "none";
+  }
 }
 
 /**
@@ -332,7 +346,7 @@ function fadeInElements() {
   // Fade in the narrator with a delay
   setTimeout(() => {
       narrator.classList.remove('fade-out');
-  }, 400); // 0.4 second delay
+  }, 200); // 0.2 second delay
   
   // Fade in the direction buttons with a smaller delay
   setTimeout(() => {
@@ -349,5 +363,5 @@ function fadeInElements() {
       if (west_shell.style.display !== "none") {
           west_shell.classList.remove('fade-out');
       }
-  }, 200); // 0.2 second delay
+  }, 400); // 0.4 second delay
 }

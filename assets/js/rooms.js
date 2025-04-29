@@ -14,7 +14,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-0.jpg",
+      src: "assets/images/story-route-0.webp",
       alt: "Leo receives his grandmother's glowing book from his parents on the living room couch"
     }
   },
@@ -32,7 +32,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-1.jpg",
+      src: "assets/images/story-route-1.webp",
       alt: "Leo sits on a couch in a glowing magical forest, holding the book"
     }
   },
@@ -52,7 +52,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-2-magical-nap.jpg",
+      src: "assets/images/story-route-2-magical-nap.webp",
       alt: "Leo asleep on the couch surrounded by magical trees and light"
     }
   },
@@ -70,7 +70,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-2.jpg",
+      src: "assets/images/story-route-2.webp",
       alt: "Leo glancing at the glowing book while holding a video game controller"
     }
   },
@@ -90,7 +90,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-4-two-paths.jpg",
+      src: "assets/images/story-route-4-two-paths.webp",
       alt: "Leo holding a book in a magical glowing forest"
     }
   },
@@ -110,7 +110,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-5-shouting-hello.jpg",
+      src: "assets/images/story-route-5-shouting-hello.webp",
       alt: "Leo looking at a glowing bird in the forest"
     }
   },
@@ -130,7 +130,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-6-tiny-village.jpg",
+      src: "assets/images/story-route-6-tiny-village.webp",
       alt: "Leo surrounded by glowing mushrooms"
     }
   },
@@ -150,7 +150,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-6-tiny-village.jpg",
+      src: "assets/images/story-route-6-tiny-village.webp",
       alt: "Leo surrounded by glowing mushrooms"
     }
   },
@@ -170,7 +170,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-8-grandma-and-the-glowing-tree.jpg",
+      src: "assets/images/story-route-8-grandma-and-the-glowing-tree.webp",
       alt: "A musical tree with Oona watching nearby"
     }
   },
@@ -188,7 +188,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-9-trickster.jpg",
+      src: "assets/images/story-route-9-trickster.webp",
       alt: "Leo on a quiet path with a glowing sign"
     }
   },
@@ -208,7 +208,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-10.jpg",
+      src: "assets/images/story-route-10.webp",
       alt: "Oona speaking to Leo near glowing trees"
     }
   },
@@ -228,7 +228,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-11-oonas-intro.jpg",
+      src: "assets/images/story-route-11-oonas-intro.webp",
       alt: "Leo reunited with his grandmother under the glowing tree"
     }
   },
@@ -248,7 +248,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-18-about-the-tree.jpg",
+      src: "assets/images/story-route-18-about-the-tree.webp",
       alt: "Leo reunited with his grandmother under the glowing tree"
     }
   },
@@ -268,7 +268,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-12.jpg",
+      src: "assets/images/story-route-12.webp",
       alt: "Leo stands with the glowing book at a forest fork"
     }
   },
@@ -288,7 +288,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-14-hugging-grandma.jpg",
+      src: "assets/images/story-route-14-hugging-grandma.webp",
       alt: "Leo encounters a mischievous jester in the forest"
     }
   },
@@ -308,7 +308,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-14.jpg",
+      src: "assets/images/story-route-14.webp",
       alt: "Leo in a glade of glowing whispers"
     }
   },
@@ -326,7 +326,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-2-magical-nap-at-home.jpg",
+      src: "assets/images/story-route-2-magical-nap-at-home.webp",
       alt: "Leo waking up back on the couch, still holding the glowing book"
     }
   },
@@ -344,7 +344,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/parents-and-Leo-in-the-kitchen.jpg",
+      src: "assets/images/parents-and-Leo-in-the-kitchen.webp",
       alt: "Leo instantly jumps up and tells his parents about the book."
     }
   },
@@ -364,7 +364,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/general-grandmother-talking.jpg",
+      src: "assets/images/general-grandmother-talking.webp",
       alt: "Leo instantly jumps up and tells his parents about the book."
     }
   },
@@ -384,7 +384,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/book-open.jpg",
+      src: "assets/images/book-open.webp",
       alt: "Leo instantly jumps up and tells his parents about the book."
     }
   },
@@ -404,7 +404,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-18-about-the-tree.jpg",
+      src: "assets/images/story-route-18-about-the-tree.webp",
       alt: "Leo instantly jumps up and tells his parents about the book."
     }
   },
@@ -424,7 +424,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-18-about-the-tree.jpg",
+      src: "assets/images/story-route-18-about-the-tree.webp",
       alt: "Leo instantly jumps up and tells his parents about the book."
     }
   },
@@ -444,7 +444,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/General-Leo-Grandmother-Oona.jpg",
+      src: "assets/images/General-Leo-Grandmother-Oona.webp",
       alt: "Leo instantly jumps up and tells his parents about the book."
     }
   },
@@ -462,7 +462,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/The-Trickster---Running.jpg",
+      src: "assets/images/The-Trickster---Running.webp",
       alt: "Leo on a quiet path with a glowing sign"
     }
   },
@@ -480,7 +480,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/The-Trickster---Off-the-Cliff.jpg",
+      src: "assets/images/The-Trickster---Off-the-Cliff.webp",
       alt: "Leo on a quiet path with a glowing sign"
     }
   },
@@ -498,7 +498,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/The-Trickster---And-Leo-Talking.jpg",
+      src: "assets/images/The-Trickster---And-Leo-Talking.webp",
       alt: "Leo on a quiet path with a glowing sign"
     }
   },
@@ -517,7 +517,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-4-two-paths.jpg",
+      src: "assets/images/story-route-4-two-paths.webp",
       alt: "Leo holding a book in a magical glowing forest"
     }
   },
@@ -536,7 +536,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/leo-walking-general-poses-and-settings-happy.jpg",
+      src: "assets/images/leo-walking-general-poses-and-settings-happy.webp",
       alt: "Leo holding a book in a magical glowing forest"
     }
   },
@@ -555,7 +555,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/where-is-your-heart-sign.jpg",
+      src: "assets/images/where-is-your-heart-sign.webp",
       alt: "Leo holding a book in a magical glowing forest"
     }
   },
@@ -573,7 +573,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/unicorl-girl-stuck.jpg",
+      src: "assets/images/unicorl-girl-stuck.webp",
       alt: "Leo holding a book in a magical glowing forest"
     }
   },
@@ -591,7 +591,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/unicorl-girl-freed.jpg",
+      src: "assets/images/unicorl-girl-freed.webp",
       alt: "Leo holding a book in a magical glowing forest"
     }
   },
@@ -609,7 +609,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/leo-overlooking-magical-kingdom.jpg",
+      src: "assets/images/leo-overlooking-magical-kingdom.webp",
       alt: "Leo holding a book in a magical glowing forest"
     }
   },
@@ -627,7 +627,7 @@ const rooms = [
     },
     media: {
       type: "image",
-      src: "assets/images/leo-sitting-with-oona-reading-the-book.jpg",
+      src: "assets/images/leo-sitting-with-oona-reading-the-book.webp",
       alt: "Leo holding a book in a magical glowing forest"
     }
   },
