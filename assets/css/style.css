@@ -124,18 +124,31 @@ push it to the left if one of them is on the row by itself */
   border-radius: 50px;
   width: 100%;
   padding: 20px;
-  border: solid 2px #d66a1e;
-  transition: background-color .5s ease-in-out;
-  transition: border .8s ease-in-out;
+  border: solid 2px #b3ae3b;
+  transition: background-color 0.5s ease-in-out, border 0.8s ease-in-out;
   
 }
 
-.direction-button:hover {
+.direction-button:hover, .direction-button:active {
   background-color: #ffdf79;
   border: solid 2px #d66a1e;
   
 }
 
+/* Back button  */
+#back {
+  padding: 5px 15px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* For when the room number is applied  */
+#room-number {
+  font-size: 1.3rem;
+  color: #777;
+  margin-top: 5px;
+  color: black;
+}
 
 
 

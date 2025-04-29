@@ -11,6 +11,7 @@ let north_shell = document.getElementById('north_shell');
 let south_shell = document.getElementById('south_shell');
 let east_shell = document.getElementById('east_shell');
 let west_shell = document.getElementById('west_shell');
+let roomHistory = [];
 
 // We need an array of areas/rooms
 // Room data - each one has an id, a name, a description, exits, media/visuals
@@ -112,7 +113,7 @@ function handleExits(currentRoom) {
         // There is an exit to the west
         west_shell.style.display = "flex"; // Make button visible
         west.innerText = "Go West"; // Set button text
-        console.log("West button text:", north.textContent)
+        console.log("West button text:", west.textContent)
 
         // Update the east button with the custom text
         west.innerText = rooms[currentRoom].buttonText.west;
@@ -231,43 +232,80 @@ gameMaster();
 
 
 
-// Add this function anywhere in your JavaScript file
+// Call this function to activate the back button
+implementBackButton();
+
 function implementBackButton() {
-  // Self-contained back button implementation
-  let roomHistory = [];
-  const back = document.getElementById('back');
   const back_shell = document.getElementById('back_shell');
   const roomNumber = document.getElementById('room-number');
-
+  
   // Override the move function to track history
   const originalMove = move;
   move = function(destination) {
+      // Add current room to history before moving
       roomHistory.push(currentRoom);
+      
+      // Call the original move function
       originalMove(destination);
+      
+      // Update room number display
+      roomNumber.textContent = `Room: ${currentRoom}`;
+      
+      // Update back button visibility
+      updateBackButtonVisibility();
   };
+  
+  // Helper function to update back button visibility
+  function updateBackButtonVisibility() {
+      if (roomHistory.length > 0) {
+          back_shell.style.display = "block";
+      } else {
+          back_shell.style.display = "none";
+      }
+  }
 
   // Add back button handler in gameMaster
   const originalGameMaster = gameMaster;
   gameMaster = function() {
+      // Call the original gameMaster function
       originalGameMaster();
       
       // Update room number display
       roomNumber.textContent = `Room: ${currentRoom}`;
       
-      // Handle back button
+      // Handle back button - use getElementById each time to get a fresh reference
       if (roomHistory.length > 0) {
           back_shell.style.display = "block";
-          const backClone = replaceButton(back);
-          backClone.addEventListener('click', () => {
+          
+          // Get a fresh reference to the back button
+          const backButton = document.getElementById('back');
+          
+          // Replace it with a clone to remove old event listeners
+          const backClone = replaceButton(backButton);
+          
+          // Add click event listener to the new button
+          backClone.addEventListener('click', function() {
+              // Get the previous room from history
               const previousRoom = roomHistory.pop();
+              
+              // Update current room
               currentRoom = previousRoom;
-              gameMaster();
+              
+              // Update the game
+              originalGameMaster(); // Use original to avoid recursion
+              
+              // Update room number
+              roomNumber.textContent = `Room: ${currentRoom}`;
+              
+              // Update back button visibility
+              updateBackButtonVisibility();
           });
       } else {
           back_shell.style.display = "none";
       }
   };
+  
+  // Initial setup
+  updateBackButtonVisibility();
+  roomNumber.textContent = `Room: ${currentRoom}`;
 }
-
-// Call this function to activate the back button
-implementBackButton();
