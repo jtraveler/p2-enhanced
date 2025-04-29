@@ -309,3 +309,45 @@ function implementBackButton() {
   updateBackButtonVisibility();
   roomNumber.textContent = `Room: ${currentRoom}`;
 }
+
+
+/**
+ * Helper function to fade out narrator and direction buttons
+ */
+function fadeOutElements() {
+  // Fade out narrator
+  narrator.classList.add('fade-out');
+  
+  // Fade out all direction containers
+  north_shell.classList.add('fade-out');
+  south_shell.classList.add('fade-out');
+  east_shell.classList.add('fade-out');
+  west_shell.classList.add('fade-out');
+}
+
+/**
+* Helper function to fade in elements with delays
+*/
+function fadeInElements() {
+  // Fade in the narrator with a delay
+  setTimeout(() => {
+      narrator.classList.remove('fade-out');
+  }, 400); // 0.4 second delay
+  
+  // Fade in the direction buttons with a smaller delay
+  setTimeout(() => {
+      // Only fade in visible buttons
+      if (north_shell.style.display !== "none") {
+          north_shell.classList.remove('fade-out');
+      }
+      if (south_shell.style.display !== "none") {
+          south_shell.classList.remove('fade-out');
+      }
+      if (east_shell.style.display !== "none") {
+          east_shell.classList.remove('fade-out');
+      }
+      if (west_shell.style.display !== "none") {
+          west_shell.classList.remove('fade-out');
+      }
+  }, 200); // 0.2 second delay
+}
