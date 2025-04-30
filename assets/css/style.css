@@ -14,7 +14,7 @@ body {
 
 header {
 
-  max-width: 500px;
+  max-width: 550px;
 }
 
 main {width: 100%;}
@@ -37,7 +37,7 @@ h1 {
 /* Additional styling for the game elements */
 #game-container {
   max-width: 800px;
-  margin: 30px auto;
+  margin: 20px auto;
   border-radius: 8px;
   margin-bottom: 200px;
 }

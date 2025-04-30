@@ -118,12 +118,12 @@ const rooms = [
     id: 6,
     name: "The Mushroom Circle",
     description: "Leo follows the music and nearly steps on thumb-sized houses! The tiny partygoers greet Leo and ask him to help their friends down from the tree to so they can come to their party",
-    north: 10,
+    north: 7,
     south: 5,
     east: 11,
     west: 16,
     buttonText: {
-      north: "Answer a riddle",
+      north: "Help their friends down form the tree",
       south: "Step out of the circle",
       east: `Shout "Help!"`,
       west: "Return to the couch"
@@ -136,21 +136,19 @@ const rooms = [
   },
   {
     id: 7,
-    name: "The Tiny Village",
-    description: `Leo follows the music and nearly steps on thumb-sized houses! The tiny partygoers greet Leo and ask him to help their friends down from the tree to so they can come to their party`,
-    north: 10,
-    south: 5,
-    east: 11,
-    west: 16,
+    name: "Helping the Tiny People Down From the Tree",
+    description: `Leo reaches up to the tree and help the tiny people down to join the party with their friends. They are so thankful and wish Leo safe travels.`,
+    north: 33,
+    south: 6,
+    east: -1,
+    west: -1,
     buttonText: {
-      north: "Answer a riddle",
-      south: "Step out of the circle",
-      east: `Shout "Help!"`,
-      west: "Return to the couch"
+      north: "Continue along your way",
+      east: "Return to the couch"
     },
     media: {
       type: "image",
-      src: "assets/images/story-route-6-tiny-village.webp",
+      src: "assets/images/leo-helping-little-people-in-the-tree.webp",
       alt: "Leo surrounded by glowing mushrooms"
     }
   },
@@ -615,6 +613,24 @@ const rooms = [
   },
   {
     id: 32,
+    name: "Wherever the Story Takes Me",
+    description: `Leo finds a comfy spot to sit down to read the book and let the stories inspire his journey. And what a pleasant surprise, Oona has swooped in to offer any guidance. Her and Leo have a very long conversation about the stories in the book and now Leo knows where he wants to go.`,
+    north: 0,
+    south: -1,
+    east: -1,
+    west: -1,
+    buttonText: {
+      north: "The End (for now). Go back to the \nbeginning to explore another adventure",
+    
+    },
+    media: {
+      type: "image",
+      src: "assets/images/leo-sitting-with-oona-reading-the-book.webp",
+      alt: "Leo holding a book in a magical glowing forest"
+    }
+  },
+  {
+    id: 33,
     name: "Wherever the Story Takes Me",
     description: `Leo finds a comfy spot to sit down to read the book and let the stories inspire his journey. And what a pleasant surprise, Oona has swooped in to offer any guidance. Her and Leo have a very long conversation about the stories in the book and now Leo knows where he wants to go.`,
     north: 0,
